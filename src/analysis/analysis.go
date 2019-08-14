@@ -86,7 +86,7 @@ func main(){
 	//读取命令行参数
 	//args: 1）参数名   2）参数的默认值   3）参数的含义说明
 	logFilePath := *flag.String("logFilePath", "../logs/dig.log", "log file path")
-	routineNum := *flag.Int("routineNum", 5, "routine的并发度")
+	routineNum := *flag.Int("routineNum", 5, "goutine的并发度")
 	targetLog := *flag.String("targetLog", "../logs/runtime.log", "打印日志的所在位置")
 	flag.Parse()
 
