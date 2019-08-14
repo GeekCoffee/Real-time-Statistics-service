@@ -1,0 +1,2 @@
+time="2019-07-26T19:36:54+08:00" level=info msg="Exec start. "
+time="2019-07-26T19:36:54+08:00" level=info msg="cmdParams: logFilePath=../logs/dig.log , routineNum=5 "

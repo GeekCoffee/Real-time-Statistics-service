@@ -1,0 +1,33 @@
+1- 对文件的操作(流I/O的操作)
+
+2- 对时间的操作
+
+3- 对URL的操作
+
+4- 对字符串的操作
+
+5- 使用MD5算法生成hash值
+hasher := md5.New() //得到Hash接口
+hasher.Write( []byte("数据值....") )
+bytes := hasher.Sum(nil) //得到MD5算法生成的hash值的字节流
+uidHex := hex.EncodeToString(bytes)  //把字节数组转换为Hex十六进制输出
+
+6- 高并发编程：
+1）要把所有链路跑通，不然channel中的数据没有goroutine来消费，或者没有goroutine进行写入，
+也是会把整个系统阻塞在某个goroutine节点上的。
+2）用于低级编程的同步，可以用sync.Mutex互斥锁的加锁机制来完成，协程的同步。
+3）更高级编程的同步，用channel来完成协程的同步工作，控制权在用户态空间被阻塞的goroutine自己提交出来，让其他goroutine使用，即CSP通信模型。
+4）哪个goroutine调用到time.Sleep()，哪个协程就停止或睡眠指定的时间，让其他协程继续工作
+
+
+7- 对命令行参数的解析
+
+
+8- 对MYSQL的操作
+
+
+9- 对redis的操作
+
+
+10- 对MQ的的操作
+
